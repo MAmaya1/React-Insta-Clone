@@ -4,8 +4,10 @@ import PropTypes from 'prop-types';
 const Post = props => {
     return (
         <div className="post">
-            <img src={props.thumbnailUrl} alt="profile"/>
-            <p>{props.username}</p>
+            <div className="user-tag">
+                <img src={props.thumbnailUrl} alt="profile"/>
+                <h2>{props.username}</h2>
+            </div>
             <img src={props.imageUrl} alt="post"/>
             <p>{props.likes} likes</p>
         </div>

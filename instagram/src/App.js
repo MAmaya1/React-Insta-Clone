@@ -4,6 +4,10 @@ import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar'
 import PostContainer from './components/PostContainer/PostContainer';
+import './components/SearchBar/searchBar.css'
+import './components/CommentSection/commentSection.css';
+import './components/PostContainer/postContainer.css'
+
 
 class App extends Component {
   constructor() {

@@ -1,10 +1,10 @@
 import React from 'react';
 
-const SearchBar = props => {
+const SearchBar = () => {
     return (
-        <header className="search-bar">
-            <input></input>
-        </header>
+        <div className="search-bar">
+            <input className="search-input" placeholder="Search"/>
+        </div>
     )
 }
 
