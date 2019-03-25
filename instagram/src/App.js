@@ -20,6 +20,7 @@ class App extends Component {
         {/* <SearchBar/> */}
         {this.state.dummyData.map(item => (
             <PostContainer
+              key={item.id}
               username={item.username}
               thumbnailUrl={item.thumbnailUrl}
               imageUrl={item.imageUrl}
