@@ -1,5 +1,5 @@
 import React from 'react';
-import Post from '../Post/Post'
+import Post from './Post'
 import CommentSection from '../CommentSection/CommentSection'
 import PropTypes from 'prop-types';
 
