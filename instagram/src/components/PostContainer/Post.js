@@ -9,7 +9,7 @@ const Post = props => {
                 <h2>{props.username}</h2>
             </div>
             <img src={props.imageUrl} alt="post"/>
-            <p>{props.likes} likes</p>
+            <p className="likes"><strong>{props.likes} likes</strong></p>
         </div>
     );
 }
