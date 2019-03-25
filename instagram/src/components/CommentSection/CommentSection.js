@@ -1,5 +1,6 @@
 import React from 'react';
-import Comment from '../Comment/Comment'
+import Comment from '../Comment/Comment';
+import PropTypes from 'prop-types';
 
 const CommentSection = props => {
     return (
@@ -11,6 +12,15 @@ const CommentSection = props => {
                 />
             ))}
         </div>
+    )
+}
+
+CommentSection.propTypes = {
+    comments: PropTypes.arrayOf(
+        PropTypes.shape({
+            username: PropTypes.string,
+            text: PropTypes.string
+        })
     )
 }
 
