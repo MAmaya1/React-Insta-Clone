@@ -33,3 +33,14 @@
     color: grey;
     font-size: 0.8rem;
 }
+
+.add-comment {
+    border-top: 1px solid lightgrey;
+    padding: 10px 20px;
+}
+
+.add-comment input {
+    border: none;
+    padding: 8px;
+    width: 98%;
+}

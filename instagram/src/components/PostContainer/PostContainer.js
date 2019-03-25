@@ -17,6 +17,9 @@ const PostContainer = props => {
                 comments={props.comments}
             />
             <p className="timestamp">{props.timestamp}</p>
+            <div className="add-comment">
+                <input placeholder="Add a comment..."></input>
+            </div>
         </div>
     );
 }
