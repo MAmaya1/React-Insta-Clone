@@ -44,7 +44,8 @@ Post.propTypes = {
     thumbnailUrl: PropTypes.string,
     username: PropTypes.string,
     imageUrl: PropTypes.string,
-    likes: PropTypes.number
+    likes: PropTypes.number,
+    addLikes: PropTypes.func
 }
 
 export default Post;
