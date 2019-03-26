@@ -19,7 +19,10 @@ const AddComment = props => {
 
 AddComment.propTypes = {
     value: PropTypes.string,
-    placeholder: PropTypes.string
+    placeholder: PropTypes.string,
+    onChange: PropTypes.func,
+    updateInputValue: PropTypes.func,
+    onClick: PropTypes.func
 }
 
 export default AddComment;

@@ -13,7 +13,6 @@ const PostContainer = props => {
                 likes={props.likes}
             />
             <CommentSection
-                dummyData={props.dummyData}
                 comments={props.comments}
                 timestamp={props.timestamp}
             />
@@ -35,8 +34,6 @@ PostContainer.propTypes = {
             text: PropTypes.string
         })
     ),
-    value: PropTypes.string,
-    placeholder: PropTypes.string
 }
 
 export default PostContainer;

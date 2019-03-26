@@ -25,7 +25,6 @@ class CommentSection extends React.Component {
 
     addNewComment = event => {
         event.preventDefault();
-        console.log(this.state.inputValue);
         const newComment = {
             id: Date.now(),
             username: 'fozcat',
@@ -37,6 +36,8 @@ class CommentSection extends React.Component {
             inputValue: ''
         })
     }
+
+    // Render
 
     render() {
         return (
@@ -60,8 +61,12 @@ class CommentSection extends React.Component {
 // Prop Types
 
 CommentSection.propTypes = {
+    updateInputValue: PropTypes.func,
+    addNewComment: PropTypes.func,
+    timestamp: PropTypes.string,
     comments: PropTypes.arrayOf(
         PropTypes.shape({
+            id: PropTypes.string,
             username: PropTypes.string,
             text: PropTypes.string
         })
