@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
 
+// Import Components
+
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar'
 import PostContainer from './components/PostContainer/PostContainer';
+
+// Import CSS
+
 import './components/SearchBar/searchBar.css';
 import './components/CommentSection/commentSection.css';
 import './components/PostContainer/postContainer.css';
 import './components/CommentSection/commentSection.css'
 
+// App Constructor
 
 class App extends Component {
   constructor() {

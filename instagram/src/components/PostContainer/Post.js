@@ -9,6 +9,9 @@ const Post = props => {
                 <h2>{props.username}</h2>
             </div>
             <img src={props.imageUrl} alt="post"/>
+            <div className="post-icons">
+                <i className="far fa-heart"></i><i className="far fa-comment"></i>
+            </div>
             <p className="likes"><strong>{props.likes} likes</strong></p>
         </div>
     );

@@ -1,6 +1,7 @@
 .post-container {
     margin-bottom: 30px;
     border: 1px solid lightgrey;
+    line-height: 1;
 }
 
 .user-tag {
@@ -22,6 +23,16 @@
 
 .user-tag h2 {
     font-size: 1.2rem;
+}
+
+.post-icons {
+    padding: 0 20px;
+    margin-top: 14px;
+    font-size: 1.4rem;
+}
+
+.post-icons .far {
+    margin-right: 10px;
 }
 
 .likes {
