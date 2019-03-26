@@ -1,6 +1,6 @@
 import React from 'react';
-import Post from './Post'
-import CommentSection from '../CommentSection/CommentSection'
+import Post from './Post';
+import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
 
 const PostContainer = props => {
@@ -11,18 +11,17 @@ const PostContainer = props => {
                 thumbnailUrl={props.thumbnailUrl}
                 imageUrl={props.imageUrl}
                 likes={props.likes}
-                timestamp={props.timestamp}
             />
             <CommentSection
+                dummyData={props.dummyData}
                 comments={props.comments}
+                timestamp={props.timestamp}
             />
-            <p className="timestamp">{props.timestamp}</p>
-            <div className="add-comment">
-                <input placeholder="Add a comment..."></input>
-            </div>
         </div>
     );
 }
+
+// Prop Types
 
 PostContainer.propTypes = {
     username: PropTypes.string,
@@ -35,7 +34,9 @@ PostContainer.propTypes = {
             username: PropTypes.string,
             text: PropTypes.string
         })
-    )
+    ),
+    value: PropTypes.string,
+    placeholder: PropTypes.string
 }
 
 export default PostContainer;

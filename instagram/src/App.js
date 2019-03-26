@@ -21,9 +21,11 @@ class App extends Component {
     super();
 
     this.state = {
-      dummyData: dummyData
+      dummyData: dummyData,
     }
-  }
+  }   
+
+  // Render
 
   render() {
     return (

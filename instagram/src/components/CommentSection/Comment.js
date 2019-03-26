@@ -9,6 +9,8 @@ const Comment = props => {
     )
 }
 
+// Prop Types
+
 Comment.propTypes = {
     username: PropTypes.string,
     text: PropTypes.string

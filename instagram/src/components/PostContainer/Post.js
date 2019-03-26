@@ -17,6 +17,8 @@ const Post = props => {
     );
 }
 
+// Prop Types
+
 Post.propTypes = {
     thumbnailUrl: PropTypes.string,
     username: PropTypes.string,
