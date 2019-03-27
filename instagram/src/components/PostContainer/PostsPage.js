@@ -1,7 +1,6 @@
 import React from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
-import withAuthenticate from '../Authentication/withAuthenticate';
 
 const PostsPage = props => {
     return (
@@ -23,4 +22,4 @@ const PostsPage = props => {
     );
 }
 
-export default withAuthenticate(PostsPage);
+export default PostsPage;

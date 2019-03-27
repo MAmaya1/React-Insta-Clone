@@ -14,7 +14,9 @@ import './components/CommentSection/commentSection.css';
 import './components/PostContainer/postContainer.css';
 import './components/CommentSection/commentSection.css'
 
-// const ComponentFromWithAuthenticate = withAuthenticate(PostsPage);
+// High Order Component
+
+const ComponentFromWithAuthenticate = withAuthenticate(PostsPage);
 
 // App Constructor
 
@@ -32,6 +34,12 @@ class App extends Component {
       dummyData: dummyData
     });
   }
+
+  // Login Function
+
+  // login = event => {
+  //   event.preventDefault;
+  // }
 
   // Update Search Value
 
@@ -57,7 +65,7 @@ class App extends Component {
     )
 
     return (
-      <PostsPage
+      <ComponentFromWithAuthenticate
         filteredData={filteredData}
         updateSearchValue={this.updateSearchValue}/>
     );
