@@ -19,17 +19,45 @@ import './components/CommentSection/commentSection.css'
 class App extends Component {
   constructor() {
     super();
-
     this.state = {
-      dummyData: dummyData
+      dummyData: [],
+      searchInput: ''
     }
   }
 
+  componentDidMount() {
+    this.setState({
+      dummyData: dummyData
+    });
+  }
+
+  // Update Search Value
+
+  updateSearchValue = event => {
+    this.setState({
+        searchInput: event.target.value
+    })
+  }
+
+  // Render
+
   render() {
+
+    // Filter dummyData
+
+    const filteredData = this.state.dummyData.filter(post => {
+        if (post.username.includes(this.state.searchInput)) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    )
+
     return (
       <div className="page-wrapper">
-        <SearchBar/>
-        {this.state.dummyData.map(item => (
+        <SearchBar updateSearchValue={this.updateSearchValue}/>
+        {filteredData.map(item => (
             <PostContainer
               key={item.id}
               username={item.username}

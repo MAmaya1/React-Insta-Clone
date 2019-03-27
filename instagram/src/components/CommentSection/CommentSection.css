@@ -1,3 +1,29 @@
 .comment-section {
     padding: 0 20px;
 }
+
+.timestamp {
+    color: grey;
+    font-size: 0.8rem;
+}
+
+.add-comment {
+    display: flex;
+    border-top: 1px solid lightgrey;
+    padding: 10px 0;
+}
+
+.add-comment input {
+    border: none;
+    padding: 8px;
+    width: 100%;
+}
+
+.add-comment button {
+    border: none;
+    background: white;
+    padding: 0 8px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+}
