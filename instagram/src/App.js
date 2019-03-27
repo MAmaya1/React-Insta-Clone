@@ -20,7 +20,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummyData: []
+      dummyData: [],
+      searchInput: ''
     }
   }
 
@@ -30,13 +31,33 @@ class App extends Component {
     });
   }
 
+  // Update Search Value
+
+  updateSearchValue = event => {
+    this.setState({
+        searchInput: event.target.value
+    })
+  }
+
   // Render
 
   render() {
+
+    // Filter dummyData
+
+    const filteredData = this.state.dummyData.filter(post => {
+        if (post.username.includes(this.state.searchInput)) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    )
+
     return (
       <div className="page-wrapper">
-        <SearchBar/>
-        {this.state.dummyData.map(item => (
+        <SearchBar updateSearchValue={this.updateSearchValue}/>
+        {filteredData.map(item => (
             <PostContainer
               key={item.id}
               username={item.username}

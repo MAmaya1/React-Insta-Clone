@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 
 const AddComment = props => {
     return (
-        <div className="add-comment">
+        <form className="add-comment">
             <input 
                 value={props.inputValue}
                 placeholder="Add a comment..."
                 onChange={props.updateInputValue}
             />
             <button onClick={props.addNewComment}>...</button>
-        </div>
+        </form>
     )
 }
 
