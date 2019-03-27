@@ -5,6 +5,7 @@ import './App.css';
 
 import dummyData from './dummy-data';
 import PostsPage from './components/PostContainer/PostsPage';
+import withAuthenticate from './components/Authentication/withAuthenticate';
 
 // Import CSS
 
@@ -12,6 +13,8 @@ import './components/SearchBar/searchBar.css';
 import './components/CommentSection/commentSection.css';
 import './components/PostContainer/postContainer.css';
 import './components/CommentSection/commentSection.css'
+
+// const ComponentFromWithAuthenticate = withAuthenticate(PostsPage);
 
 // App Constructor
 
