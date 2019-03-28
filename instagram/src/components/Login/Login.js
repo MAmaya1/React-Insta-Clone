@@ -36,11 +36,21 @@ class Login extends React.Component {
 
     render() {
         return (
-            <form className="login-form">
-                <input placeholder="Username" onChange={this.updateUsername}/>
-                <input placeholder="Password" onChange={this.updatePassword}/>
-                <button onClick={this.login}>Log In</button>
-            </form>
+            <div className="wrapper">
+                <h1><i className="fab fa-instagram"></i> InstaPic</h1>
+                <form className="login-form">
+                    <input 
+                        placeholder="Username" 
+                        onChange={this.updateUsername}
+                    />
+                    <input 
+                        placeholder="Password" 
+                        type="password" 
+                        onChange={this.updatePassword}
+                    />
+                    <button onClick={this.login}>Log In</button>
+                </form>
+            </div>
         )
     }
 }
