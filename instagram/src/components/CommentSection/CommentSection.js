@@ -27,7 +27,7 @@ class CommentSection extends React.Component {
         event.preventDefault();
         const newComment = {
             id: Date.now(),
-            username: 'fozcat',
+            username: localStorage.getItem('username'),
             text: this.state.inputValue
         }
 

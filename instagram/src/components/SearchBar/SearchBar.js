@@ -15,6 +15,12 @@ const SearchBar = props => {
                 <i className="far fa-user"></i>
                 <i className="far fa-heart"></i>
             </div>
+            <button
+                className="log-out-btn"
+                onClick={() => {
+                    localStorage.clear();
+                    window.location.reload();
+                }}>Log Out</button>
         </header>
     )
 }
