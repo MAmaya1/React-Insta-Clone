@@ -11,8 +11,6 @@ import withAuthenticate from './components/Authentication/withAuthenticate';
 // Import CSS
 
 import './components/Login/login.css';
-import './components/CommentSection/commentSection.css';
-import './components/CommentSection/commentSection.css'
 
 // High Order Component
 
