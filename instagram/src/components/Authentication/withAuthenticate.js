@@ -1,38 +1,32 @@
 import React from 'react';
 
-const withAuthenticate = FirstComponent => SecondComponent => props => {
-    // return class extends React.Component {
-    //     constructor(props) {
-    //         super(props);
+const withAuthenticate = FirstComponent => SecondComponent => {
+    return class extends React.Component {
+        constructor(props) {
+            super(props);
 
-    //         this.state = {
-    //             loggedIn: false
-    //         }
-    //     }
+            this.state = {
+                loggedIn: false
+            }
+        }
 
-    //     componentDidMount() {
-    //         if (localStorage.getItem('username')) {
-    //             this.setState({
-    //                 loggedIn: true
-    //             })
-    //         }
-    //     }
+        componentDidMount() {
+            if (localStorage.getItem('username') && (localStorage.getItem('password'))) {
+                this.setState({
+                    loggedIn: true
+                })
+            }
+        }
 
-    //     render() {
+        render() {
 
-    //         if (this.state.loggedIn === true) {
-    //             return <FirstComponent {...props}/>
-    //         } else {
-    //             return <SecondComponent {...props}/>
-    //         }
-    //     }
+            if (this.state.loggedIn === true) {
+                return <FirstComponent {...this.props}/>
+            } else {
+                return <SecondComponent {...this.props}/>
+            }
+        }
     
-    // }
-
-    if (localStorage.getItem('username') === 'fozcat' && localStorage.getItem('password') === 'test') {
-        return <FirstComponent {...props}/>
-    } else {
-        return <SecondComponent {...props}/>
     }
 }
 
