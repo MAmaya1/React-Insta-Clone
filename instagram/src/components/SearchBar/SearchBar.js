@@ -1,9 +1,60 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styled from 'styled-components'
+
+// Styled Component
+
+const Header = styled.header`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid lightgrey;
+    position: relative;
+
+    .fa-instagram {
+        font-size: 2.5rem;
+        padding: 0 10px;
+        border-right: 1px solid black;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .search-input {
+        padding: 5px 8px;
+    }
+
+    .top-icons {
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 1.2rem;
+        width: 197px;
+    }
+
+    .log-out-btn {
+        right: 0;
+        bottom: 0;
+        padding: 5px;
+        position: absolute;
+        background: white;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background: rgb(230, 230, 230);
+        border-radius: 5px;
+        transition: all 200ms ease;
+        }
+    }
+`
+
 const SearchBar = props => {
     return (
-        <header>
+        <Header>
             <h1><i className="fab fa-instagram"></i> InstaPic</h1>
             <input 
                     className="search-input" 
@@ -21,7 +72,7 @@ const SearchBar = props => {
                     localStorage.clear();
                     window.location.reload();
                 }}>Log Out</button>
-        </header>
+        </Header>
     )
 }
 
