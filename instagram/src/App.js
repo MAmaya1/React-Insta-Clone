@@ -5,6 +5,7 @@ import './App.css';
 
 import dummyData from './dummy-data';
 import PostsPage from './components/PostContainer/PostsPage';
+import Login from './components/Login/Login';
 import withAuthenticate from './components/Authentication/withAuthenticate';
 
 // Import CSS
@@ -16,7 +17,7 @@ import './components/CommentSection/commentSection.css'
 
 // High Order Component
 
-const ComponentFromWithAuthenticate = withAuthenticate(PostsPage);
+const ComponentFromWithAuthenticate = withAuthenticate(PostsPage)(Login);
 
 // App Constructor
 
@@ -25,7 +26,9 @@ class App extends Component {
     super();
     this.state = {
       dummyData: [],
-      searchInput: ''
+      searchInput: '',
+      username: 'fozcat',
+      loggedIn: false,
     }
   }
 
@@ -33,13 +36,19 @@ class App extends Component {
     this.setState({
       dummyData: dummyData
     });
+
+    if (localStorage.getItem('username')) {
+      this.setState({
+        loggedIn: true
+      })
+    }
   }
 
   // Login Function
 
-  // login = event => {
-  //   event.preventDefault;
-  // }
+  login = () => {
+    localStorage.setItem('username', this.state.username);
+  }
 
   // Update Search Value
 
@@ -67,7 +76,9 @@ class App extends Component {
     return (
       <ComponentFromWithAuthenticate
         filteredData={filteredData}
-        updateSearchValue={this.updateSearchValue}/>
+        updateSearchValue={this.updateSearchValue}
+        login={this.login}
+      />
     );
   }
 }
