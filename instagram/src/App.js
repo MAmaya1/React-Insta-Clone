@@ -12,7 +12,6 @@ import withAuthenticate from './components/Authentication/withAuthenticate';
 
 import './components/Login/login.css';
 import './components/CommentSection/commentSection.css';
-import './components/PostContainer/postContainer.css';
 import './components/CommentSection/commentSection.css'
 
 // High Order Component
