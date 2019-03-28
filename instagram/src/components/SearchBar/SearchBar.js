@@ -23,55 +23,56 @@ const Header = styled.header`
     h1 {
         font-size: 2.5rem;
     }
+`
 
-    .search-input {
-        padding: 5px 8px;
-    }
+const SearchInput = styled.input`
+    padding: 5px 8px;
+`
 
-    .top-icons {
-        display: flex;
-        justify-content: space-evenly;
-        font-size: 1.2rem;
-        width: 197px;
-    }
+const TopIcons = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+    width: 197px;
+`
 
-    .log-out-btn {
-        right: 0;
-        bottom: 0;
-        padding: 5px;
-        position: absolute;
-        background: white;
-        border: none;
-        cursor: pointer;
+const LogOutBtn = styled.button`
+    right: 0;
+    bottom: 0;
+    padding: 5px;
+    position: absolute;
+    background: white;
+    border: none;
+    cursor: pointer;
 
-        &:hover {
-            background: rgb(230, 230, 230);
-        border-radius: 5px;
-        transition: all 200ms ease;
-        }
+    &:hover {
+        background: rgb(230, 230, 230);
+    border-radius: 5px;
+    transition: all 200ms ease;
     }
 `
+
+// SearchBar Component
 
 const SearchBar = props => {
     return (
         <Header>
             <h1><i className="fab fa-instagram"></i> InstaPic</h1>
-            <input 
-                    className="search-input" 
-                    placeholder="Search"
-                    onChange={props.updateSearchValue}
+            <SearchInput
+                className="search-input" 
+                placeholder="Search"
+                onChange={props.updateSearchValue}
             />
-            <div className="top-icons">
+            <TopIcons>
                 <i className="far fa-compass"></i>
                 <i className="far fa-user"></i>
                 <i className="far fa-heart"></i>
-            </div>
-            <button
-                className="log-out-btn"
+            </TopIcons>
+            <LogOutBtn
                 onClick={() => {
                     localStorage.clear();
                     window.location.reload();
-                }}>Log Out</button>
+                }}>Log Out</LogOutBtn>
         </Header>
     )
 }
