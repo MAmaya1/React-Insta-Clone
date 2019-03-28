@@ -1,6 +1,48 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styled from 'styled-components'
+
+// Styled Components
+
+const PostImage = styled.img`
+    width: 100%;
+`
+
+const UserTag = styled.div`
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+
+    img {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        margin-right: 10px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+`
+
+const PostIcons = styled.div`
+    padding: 0 20px;
+    margin-top: 14px;
+    font-size: 1.4rem;
+    cursor: pointer;
+
+    .far {
+        margin-right: 10px;
+    }
+`
+
+const Likes = styled.p`
+    padding: 0 20px;
+`
+
+// Post Component Constructor
+
 class Post extends React.Component {
     constructor(props) {
         super(props);
@@ -23,16 +65,16 @@ class Post extends React.Component {
 
     render() {
         return (
-            <div className="post">
-                <div className="user-tag">
+            <div>
+                <UserTag>
                     <img src={this.props.thumbnailUrl} alt="profile"/>
                     <h2>{this.props.username}</h2>
-                </div>
-                <img src={this.props.imageUrl} alt="post"/>
-                <div className="post-icons">
+                </UserTag>
+                <PostImage src={this.props.imageUrl} alt="post"/>
+                <PostIcons>
                     <i className="far fa-heart" onClick={this.addLikes}></i><i className="far fa-comment"></i>
-                </div>
-                <p className="likes"><strong>{this.state.likes} likes</strong></p>
+                </PostIcons>
+                <Likes><strong>{this.state.likes} likes</strong></Likes>
             </div>
         );
     }

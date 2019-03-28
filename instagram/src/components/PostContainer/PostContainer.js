@@ -3,7 +3,7 @@ import Post from './Post';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
 
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 // Styled Components
 
@@ -11,43 +11,9 @@ const StyledPostContainer = styled.div`
     margin-bottom: 30px;
     border: 1px solid lightgrey;
     line-height: 1.2;
-
-    .user-tag {
-        display: flex;
-        align-items: center;
-        padding: 10px 20px;
-    }
-    
-    .post img {
-        width: 100%;
-    }
-    
-    .user-tag img {
-        width: 40px;
-        height: 40px;
-        border-radius: 100%;
-        margin-right: 10px;
-    }
-    
-    .user-tag h2 {
-        font-size: 1.2rem;
-    }
-    
-    .post-icons {
-        padding: 0 20px;
-        margin-top: 14px;
-        font-size: 1.4rem;
-        cursor: pointer;
-    }
-    
-    .post-icons .far {
-        margin-right: 10px;
-    }
-    
-    .likes {
-        padding: 0 20px;
-    }
 `
+
+// Post Container Component
 
 const PostContainer = props => {
     return (
