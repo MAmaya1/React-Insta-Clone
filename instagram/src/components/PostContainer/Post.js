@@ -19,10 +19,19 @@ const UserTag = styled.div`
         height: 40px;
         border-radius: 100%;
         margin-right: 10px;
+
+        @media (max-width: 500px) {
+            width: 100px;
+            height: 100px;
+        }
     }
 
     h2 {
         font-size: 1.2rem;
+
+        @media (max-width: 500px) {
+            font-size: 2.8rem;
+        }
     }
 `
 
@@ -34,11 +43,24 @@ const PostIcons = styled.div`
 
     .far {
         margin-right: 10px;
+
+        @media (max-width: 500px) {
+            margin-right: 20px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        font-size: 4rem;
+        
     }
 `
 
 const Likes = styled.p`
     padding: 0 20px;
+
+    @media (max-width: 500px) {
+        font-size: 1.8rem;
+    }
 `
 
 // Post Component Constructor

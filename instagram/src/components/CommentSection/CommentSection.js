@@ -10,31 +10,18 @@ import styled from 'styled-components'
 const StyledCommentSection = styled.div`
     padding: 0 20px;
 
-    .add-comment {
-        display: flex;
-        border-top: 1px solid lightgrey;
-        padding: 10px 0;
-    }
-
-    .add-comment input {
-        border: none;
-        padding: 8px;
-        width: 100%;
-    }
-    
-    .add-comment button {
-        border: none;
-        background: white;
-        padding: 0 8px;
-        font-size: 1.4rem;
-        font-weight: bold;
-        cursor: pointer;
+    @media (max-width: 500px) {
+        font-size: 2rem;
     }
 `
 
 const TimeStamp = styled.p`
     color: grey;
     font-size: 0.8rem;
+
+    @media (max-width: 500px) {
+        font-size: 1.5rem;
+    }
 `
 
 // CommentSection Constructor
