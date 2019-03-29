@@ -27,6 +27,11 @@ const Header = styled.header`
 
 const SearchInput = styled.input`
     padding: 5px 8px;
+
+    @media (max-width: 500px) {
+        padding: 10px;
+        width: 200px;
+    }
 `
 
 const TopIcons = styled.div`
@@ -34,6 +39,18 @@ const TopIcons = styled.div`
     justify-content: space-evenly;
     font-size: 1.2rem;
     width: 197px;
+
+    @media (max-width: 500px) {
+        font-size: 2rem;
+    }
+
+    .fa-sign-out-alt {
+        display: none;
+        
+        @media (max-width: 500px) {
+            display: inline-block;
+        }
+    }
 `
 
 const LogOutBtn = styled.button`
@@ -47,8 +64,12 @@ const LogOutBtn = styled.button`
 
     &:hover {
         background: rgb(230, 230, 230);
-    border-radius: 5px;
-    transition: all 200ms ease;
+        border-radius: 5px;
+        transition: all 200ms ease;
+    }
+
+    @media (max-width: 500px) {
+        display: none;
     }
 `
 
@@ -67,6 +88,11 @@ const SearchBar = props => {
                 <i className="far fa-compass"></i>
                 <i className="far fa-user"></i>
                 <i className="far fa-heart"></i>
+                <i className="fas fa-sign-out-alt"
+                    onClick={() => {
+                    localStorage.clear();
+                    window.location.reload();
+                }}></i>
             </TopIcons>
             <LogOutBtn
                 onClick={() => {
