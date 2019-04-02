@@ -3,9 +3,21 @@ import Post from './Post';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
 
+import styled from 'styled-components';
+
+// Styled Components
+
+const StyledPostContainer = styled.div`
+    margin-bottom: 30px;
+    border: 1px solid lightgrey;
+    line-height: 1.2;
+`
+
+// Post Container Component
+
 const PostContainer = props => {
     return (
-        <div className="post-container">
+        <StyledPostContainer>
             <Post 
                 username={props.username}
                 thumbnailUrl={props.thumbnailUrl}
@@ -16,7 +28,7 @@ const PostContainer = props => {
                 comments={props.comments}
                 timestamp={props.timestamp}
             />
-        </div>
+        </StyledPostContainer>
     );
 }
 

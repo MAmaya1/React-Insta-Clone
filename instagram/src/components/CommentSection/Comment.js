@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Comment = props => {
     return (
-        <div className="comment">
+        <div>
             <p><strong>{props.username}</strong> {props.text}</p>
         </div>
     )

@@ -3,6 +3,29 @@ import Comment from './Comment';
 import AddComment from '../AddComment/AddComment'
 import PropTypes from 'prop-types';
 
+import styled from 'styled-components'
+
+// Styled Components
+
+const StyledCommentSection = styled.div`
+    padding: 0 20px;
+
+    @media (max-width: 500px) {
+        font-size: 2rem;
+    }
+`
+
+const TimeStamp = styled.p`
+    color: grey;
+    font-size: 0.8rem;
+
+    @media (max-width: 500px) {
+        font-size: 1.5rem;
+    }
+`
+
+// CommentSection Constructor
+
 class CommentSection extends React.Component {
     constructor(props) {
         super(props);
@@ -41,7 +64,7 @@ class CommentSection extends React.Component {
 
     render() {
         return (
-            <div className="comment-section">
+            <StyledCommentSection>
                 {this.state.commentsArray.map(comment => (
                     <Comment 
                         key={comment.id}
@@ -49,11 +72,11 @@ class CommentSection extends React.Component {
                         text={comment.text}
                     />
                 ))}
-                <p className="timestamp">{this.props.timestamp}</p>
+                <TimeStamp>{this.props.timestamp}</TimeStamp>
                 <AddComment
                     updateInputValue={this.updateInputValue} 
                     addNewComment={this.addNewComment}/>
-            </div>
+            </StyledCommentSection>
         )
     }
 }
